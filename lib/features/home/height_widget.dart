@@ -2,15 +2,23 @@ import 'package:flutter/material.dart';
 
 class HeightWidget extends StatefulWidget {
   final Function(int) onChange;
+  final int initialHeight;
 
-  const HeightWidget({super.key, required this.onChange});
+  const HeightWidget(
+      {super.key, required this.onChange, required this.initialHeight});
 
   @override
   State<HeightWidget> createState() => _HeightWidgetState();
 }
 
 class _HeightWidgetState extends State<HeightWidget> {
-  int _height = 150;
+  late int _height;
+
+  @override
+  void initState() {
+    super.initState();
+    _height = widget.initialHeight;
+  }
 
   @override
   Widget build(BuildContext context) {

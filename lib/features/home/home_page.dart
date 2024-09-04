@@ -35,10 +35,13 @@ class _HomeScreenState extends State<HomeScreen> {
           padding: const EdgeInsets.all(12),
           child: Column(
             children: [
-              GenderWidget(onChange: (genderVal) {
-                _gender = genderVal;
-              }),
+              GenderWidget(
+                  initialGender: _gender,
+                  onChange: (genderVal) {
+                    _gender = genderVal;
+                  }),
               HeightWidget(
+                initialHeight: _height,
                 onChange: (heightVal) {
                   _height = heightVal;
                 },

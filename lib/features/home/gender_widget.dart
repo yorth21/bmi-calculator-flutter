@@ -3,15 +3,23 @@ import 'package:flutter_3d_choice_chip/flutter_3d_choice_chip.dart';
 
 class GenderWidget extends StatefulWidget {
   final Function(int) onChange;
+  final int initialGender;
 
-  const GenderWidget({super.key, required this.onChange});
+  const GenderWidget(
+      {super.key, required this.onChange, required this.initialGender});
 
   @override
   State<GenderWidget> createState() => _GenderWidgetState();
 }
 
 class _GenderWidgetState extends State<GenderWidget> {
-  int _gender = 0;
+  late int _gender;
+
+  @override
+  void initState() {
+    super.initState();
+    _gender = widget.initialGender;
+  }
 
   final ChoiceChip3DStyle selectedStyle = ChoiceChip3DStyle(
       topColor: Colors.grey[200]!,

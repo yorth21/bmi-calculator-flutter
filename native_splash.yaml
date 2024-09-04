@@ -1,6 +1,17 @@
-flutter_navite_splash:
+flutter_native_splash:
   android: true
   ios: true
   web: false
 
-  color: "#42a5f5"
+  background_image: "assets/native_splash/background.png"
+  image: "assets/native_splash/logo.png"
+  branding: "assets/native_splash/branding.png"
+
+  background_image_dark: "assets/native_splash/background_dark.png"
+  image_dark: "assets/native_splash/logo_dark.png"
+  branding_dark: "assets/native_splash/branding_dark.png"
+
+  android_12:
+    color: "#d4e4ed"
+    image: "assets/native_splash/android_logo.png"
+    branding: "assets/native_splash/android_branding.png"
