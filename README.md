@@ -1,4 +1,4 @@
-# hola_mundo
+# BMI Calculator
 
 A new Flutter project.
 
