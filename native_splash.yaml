@@ -1,0 +1,6 @@
+flutter_navite_splash:
+  android: true
+  ios: true
+  web: false
+
+  color: "#42a5f5"
